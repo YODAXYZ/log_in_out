@@ -38,6 +38,26 @@
   border: 1px solid red;
 }
 
-.error {
+.error:first-child {
+  border: 1px solid red;
+}
+.error:last-child{
+  position: absolute;
+  padding: 8px;
   color: red;
+}
+
+.valid {
+    border: 1px solid green;
+}
+
+/* .form-group {
+  position: relative;
+} */
+.red_line {
+  color: red;
+
+}
+.red_border {
+  border: 1px solid red;
 }
