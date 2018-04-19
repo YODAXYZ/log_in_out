@@ -69,9 +69,9 @@
 // //Requests that get information are perform through the method: query ()
 //
 // //var_dump($res);
-include "auth.php"; //Подключаем БД
-
-$query = "select * from user";
-$result = mysql_query($query) or die(mysql_error());
-var_dump($query);
+// include "auth.php"; //Подключаем БД
+//
+// $query = "select * from user";
+// $result = mysql_query($query) or die(mysql_error());
+// var_dump($query);
 ?>
