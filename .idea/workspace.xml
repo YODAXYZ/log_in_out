@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc96e0a4-f5f6-4d83-9a9d-0de22c78c3a6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/html/error.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/sign-in.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/sign-up.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/snake.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reg.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sign-in.php" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,8 +24,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state>
+              <caret selection-end-line="19" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -37,11 +37,6 @@
               <caret line="242" column="6" selection-start-line="242" selection-start-column="6" selection-end-line="242" selection-end-column="6" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sign-up.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/sign-up.html">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="bootstrap.js" pinned="false" current-in-tab="false">
@@ -82,11 +77,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="768" />
+    <option name="y" value="1460" />
     <option name="width" value="651" />
-    <option name="height" value="744" />
+    <option name="height" value="716" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -157,18 +152,18 @@
       <updated>1523343760463</updated>
       <workItem from="1523343762133" duration="446000" />
       <workItem from="1523344225048" duration="2570000" />
-      <workItem from="1524649749150" duration="1078000" />
+      <workItem from="1524649749150" duration="1677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4094000" />
+    <option name="totallyTimeSpent" value="4693000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="1431" y="-4" width="3775" height="2164" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24960877" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.085021324" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
@@ -249,8 +244,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        <state>
+          <caret selection-end-line="19" selection-end-column="14" />
         </state>
       </provider>
     </entry>
