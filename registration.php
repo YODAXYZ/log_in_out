@@ -16,13 +16,12 @@ if((isset($_POST['sign-up'])))
   $yourPassword = $_POST['your_password'];
   $yourPasswordConf = $_POST['confirm_your_password'];
 
-  if(strlen($yourFName) < 2 ){
-    $FNameError = "Your field first name must be more 2.";
+  if(strlen($yourFName) < 1 ){
+    $FNameError = "* You first name field in reguired *";
     $error_status = false;
-    return false;
   }
-  if(strlen($yourLName) < 2){
-    $LNameError = " Your field first name must be more 2.";
+  if(strlen($yourLName) < 1){
+    $LNameError = "* You last name field in reguired *";
     $error_status = false;
   }
   if(!filter_var($yourEmail, FILTER_VALIDATE_EMAIL)){

@@ -132,71 +132,71 @@
 // // //   });
 // // // })();
 // //
-// (function(){
-//     $(".form-sign").click(function(e){
-//       $('.red_line').html("");
-//       // Initializing Variables With Form Element Values
-//       var firstName = $('#firstName').val();
-//       var lastName = $("#lastName").val();
-//       var email = $("#email").val();
-//       var password = $("#password").val();
-//       var password2 = $("#confirm_password").val();
-//       // Initializing Variables With Regular Expressions
-//       var name_regex = /^[a-zA-Z]+$/;
-//       var email_regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
-//       var error_message = true;
-//       if(!firstName.length){
-//         $('#p1').text("*  You first name field in reguired *");
-//         error_message = false;
-//       }
-//       if (!firstName.match(name_regex)) {
-//         $('#p1').text("* For your first name please use alphabets only *");
-//         error_message = false;
-//       }
-//
-//       if (lastName.length == 0) {
-//         $('#p2').text("* You last name field in reguired *");
-//         error_message = false;
-//       }
-//       if (!lastName.match(name_regex)){
-//         $('#p2').text("* For your last name please use alphabets only *");
-//         error_message = false;
-//       }
-//
-//       if(!email.match(email_regex)){
-//         $('#p3').text("* For your email please use @ + . *");
-//         error_message = false;
-//       }
-//
-//       if(password.length < 8){
-//         $('#p4').text("* You password must be 8 or more  *");
-//         error_message = false;
-//       }
-//
-//       if(password2 != password){
-//         $('#p5').text("* You password must be same *");
-//         error_message = false;
-//       }
-//       if(error_message){
-//         var sendInfo = {
-//           lname: lastName,
-//           fname: firstName,
-//           email: email,
-//           password: password
-//       };
-//
-//       $.ajax({
-//           type: "POST",
-//           url: "/registration.php",
-//           dataType: "json",
-//           success: function () {
-//             alert('OK');
-//           },
-//           data: sendInfo
-//       });
-//     }
-//     else{
-//       return false;
-//     }
-//   });
-// })();
+(function(){
+    $(".form-sign").click(function(e){
+      $('.red_line').html("");
+      // Initializing Variables With Form Element Values
+      var firstName = $('#firstName').val();
+      var lastName = $("#lastName").val();
+      var email = $("#email").val();
+      var password = $("#password").val();
+      var password2 = $("#confirm_password").val();
+      // Initializing Variables With Regular Expressions
+      var name_regex = /^[a-zA-Z]+$/;
+      var email_regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+      var error_message = true;
+      if(!firstName.length){
+        $('#p1').text("*  You first name field in reguired *");
+        error_message = false;
+      }
+      if (!firstName.match(name_regex)) {
+        $('#p1').text("* For your first name please use alphabets only *");
+        error_message = false;
+      }
+
+      if (lastName.length == 0) {
+        $('#p2').text("* You last name field in reguired *");
+        error_message = false;
+      }
+      if (!lastName.match(name_regex)){
+        $('#p2').text("* For your last name please use alphabets only *");
+        error_message = false;
+      }
+
+      if(!email.match(email_regex)){
+        $('#p3').text("* For your email please use @ + . *");
+        error_message = false;
+      }
+
+      if(password.length < 8){
+        $('#p4').text("* You password must be 8 or more  *");
+        error_message = false;
+      }
+
+      if(password2 != password){
+        $('#p5').text("* You password must be same *");
+        error_message = false;
+      }
+      if(error_message){
+        var sendInfo = {
+          lname: lastName,
+          fname: firstName,
+          email: email,
+          password: password
+      };
+
+      $.ajax({
+          type: "POST",
+          url: "/registration.php",
+          dataType: "json",
+          success: function () {
+            alert('OK');
+          },
+          data: sendInfo
+      });
+    }
+    else{
+      return false;
+    }
+  });
+})();
