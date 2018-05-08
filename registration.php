@@ -8,7 +8,7 @@ if((isset($_POST['sign-up'])))
       echo $exc->getMessage();
       exit();
   }
-  $eFName = $eLName = $eEmail = $ePassword = $ePasswordConf = "";
+  $FNameError = $LNameError = $emailError = $passwordError = $passwordConfError = "";
   $error_status = true;
   $yourFName = trim($_POST['your_firstName']);//trim() - delete space with begin str and end str
   $yourLName = trim($_POST['your_lastName']);
@@ -16,26 +16,26 @@ if((isset($_POST['sign-up'])))
   $yourPassword = $_POST['your_password'];
   $yourPasswordConf = $_POST['confirm_your_password'];
 
-
-
   if(strlen($yourFName) < 2 ){
-    $eFName = "Your field first name must be more 2.";
+    $FNameError = "Your field first name must be more 2.";
     $error_status = false;
+    return false;
   }
   if(strlen($yourLName) < 2){
-    $eLName = " Your field first name must be more 2.";
+    $LNameError = " Your field first name must be more 2.";
     $error_status = false;
   }
   if(!filter_var($yourEmail, FILTER_VALIDATE_EMAIL)){
-    $eEmail = " Your field email incorrect.";
+    $emailError = " Your field email incorrect.";
     $error_status = false;
   }
   if(strlen($yourPassword) < 8){
-    $ePassword  = " Your field password must be more 7.";
+    $passwordError  = " Your field password must be more 7.";
+    $error_status = false;
   }
   if($yourPasswordConf=!$yourPassword){
-    $ePasswordConf = " Your password must be same.";
-
+    $passwordConfError = " Your password must be same.";
+    $error_status = false;
   }
   if($error_status){
     $pdoQuery = "INSERT INTO `user`(`lname`, `fname`, `email`, `password`) VALUES (:lname,:fname,:email,:password)";
@@ -47,7 +47,7 @@ if((isset($_POST['sign-up'])))
     include "html/you_welcome.html";
   }
   else {
-    include "html/sign-up.php";
+     return false;
   }
 }
 ?>

@@ -144,40 +144,40 @@
 //       // Initializing Variables With Regular Expressions
 //       var name_regex = /^[a-zA-Z]+$/;
 //       var email_regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
-//
+//       var error_message = true;
 //       if(!firstName.length){
 //         $('#p1').text("*  You first name field in reguired *");
-//         return false;
+//         error_message = false;
 //       }
 //       if (!firstName.match(name_regex)) {
 //         $('#p1').text("* For your first name please use alphabets only *");
-//         return false;
+//         error_message = false;
 //       }
 //
 //       if (lastName.length == 0) {
 //         $('#p2').text("* You last name field in reguired *");
-//         return false;
+//         error_message = false;
 //       }
 //       if (!lastName.match(name_regex)){
 //         $('#p2').text("* For your last name please use alphabets only *");
-//         return false;
+//         error_message = false;
 //       }
 //
 //       if(!email.match(email_regex)){
 //         $('#p3').text("* For your email please use @ + . *");
-//         return false;
+//         error_message = false;
 //       }
 //
 //       if(password.length < 8){
 //         $('#p4').text("* You password must be 8 or more  *");
-//         return false;
+//         error_message = false;
 //       }
 //
 //       if(password2 != password){
 //         $('#p5').text("* You password must be same *");
-//         return false;
+//         error_message = false;
 //       }
-//       else{
+//       if(error_message){
 //         var sendInfo = {
 //           lname: lastName,
 //           fname: firstName,
@@ -187,13 +187,16 @@
 //
 //       $.ajax({
 //           type: "POST",
-//           url: "/reg.php",
+//           url: "/registration.php",
 //           dataType: "json",
 //           success: function () {
 //             alert('OK');
 //           },
 //           data: sendInfo
 //       });
+//     }
+//     else{
+//       return false;
 //     }
 //   });
 // })();
