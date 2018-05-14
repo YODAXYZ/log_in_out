@@ -1,4 +1,5 @@
 <?php
+  $error_status = true;
 // require_once("db_connection.php");
 if((isset($_POST['sign-up'])))
 {
@@ -9,7 +10,7 @@ if((isset($_POST['sign-up'])))
       exit();
   }
   $FNameError = $LNameError = $emailError = $passwordError = $passwordConfError = "";
-  $error_status = true;
+
   $yourFName = trim($_POST['your_firstName']);//trim() - delete space with begin str and end str
   $yourLName = trim($_POST['your_lastName']);
   $yourEmail = trim($_POST['your_email']);
@@ -32,6 +33,13 @@ if((isset($_POST['sign-up'])))
     $passwordError  = " Your field password must be more 7.";
     $error_status = false;
   }
+  // $conn = mysqli_connect("localhost", "root", "Trezvonnozvon=2015", "reg");
+  // $select = "SELECT * FROM 'user' WHERE `email` = '$yourEmail'";
+  // $result = $conn -> query($select);
+  // if($result -> num_rows > 0) {
+  //     $emailError = '* This email is already being used *';
+  //     $error_status = false;
+  // }
   if($yourPasswordConf=!$yourPassword){
     $passwordConfError = " Your password must be same.";
     $error_status = false;
@@ -43,10 +51,10 @@ if((isset($_POST['sign-up'])))
 
     $pdoExec = $pdoResult->execute(array(":fname"=>$yourFName, ":lname"=>$yourLName, ":email"=>$yourEmail, ":password"=>$yourPassword));
 
-    include "html/you_welcome.html";
+    // include "html/you_welcome.html";
   }
-  else {
-     return false;
-  }
+  // else {
+  //    return false;
+  // }
 }
 ?>

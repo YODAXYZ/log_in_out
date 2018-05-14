@@ -30,6 +30,9 @@ switch ($url) {
     case 'log_in_out.com/sign-up':
       include(ROOT . '/html/sign-up.php');
       break;
+    case 'log_in_out.com/reg_ok':
+      include(ROOT . '/html/user.php');
+      break;
 
     default:
       include(ROOT . '/html/404.html');

@@ -142,15 +142,10 @@
       var password = $("#password").val();
       var password2 = $("#confirm_password").val();
       // Initializing Variables With Regular Expressions
-      var name_regex = /^[a-zA-Z]+$/;
       var email_regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
       var error_message = true;
       if(!firstName.length){
         $('#p1').text("*  You first name field in reguired *");
-        error_message = false;
-      }
-      if (!firstName.match(name_regex)) {
-        $('#p1').text("* For your first name please use alphabets only *");
         error_message = false;
       }
 
@@ -158,11 +153,6 @@
         $('#p2').text("* You last name field in reguired *");
         error_message = false;
       }
-      if (!lastName.match(name_regex)){
-        $('#p2').text("* For your last name please use alphabets only *");
-        error_message = false;
-      }
-
       if(!email.match(email_regex)){
         $('#p3').text("* For your email please use @ + . *");
         error_message = false;

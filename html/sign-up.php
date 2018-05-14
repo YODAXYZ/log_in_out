@@ -32,7 +32,7 @@
       <input  id="confirm_password"  name="confirm_your_password" type="password" class="form-control" placeholder="Return password"><p class="red_line" id="p5"> <?php echo isset($passwordConfError) ? $passwordConfError : ""; ?></p>
     </div>
 
-    <div class="form-control" action="">
+    <div class="form-control" action="/reg_ok">
       <button id="register" name="sign-up" class="bm" type="submit">Sign up</button>
     </div>
     <p id="result"></p>
