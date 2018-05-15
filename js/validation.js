@@ -133,6 +133,13 @@
 // // // })();
 // //
 (function(){
+  $("#register").click(function(e){
+    $("input").focus(function(e){
+      $("this").find("p").css("color", "white");
+    });
+    // $("input").focus(function(e){
+    //   $("p").text("");
+    // });
     $(".form-sign").click(function(e){
       $('.red_line').html("");
       // Initializing Variables With Form Element Values
@@ -189,4 +196,8 @@
       return false;
     }
   });
+});
+  // $('input').focus(function(){
+  //   $('p').text("");
+  // });
 })();
