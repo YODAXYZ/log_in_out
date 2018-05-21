@@ -135,7 +135,7 @@
 (function(){
   $("#register").click(function(e){
     $("input").focus(function(e){
-      $("this").find("p").css("color", "white");
+      $("a").find("p").text("");
     });
     // $("input").focus(function(e){
     //   $("p").text("");
@@ -174,30 +174,31 @@
         $('#p5').text("* You password must be same *");
         error_message = false;
       }
-      if(error_message){
-        var sendInfo = {
-          lname: lastName,
-          fname: firstName,
-          email: email,
-          password: password
-      };
-
-      $.ajax({
-          type: "POST",
-          url: "/registration.php",
-          dataType: "json",
-          success: function () {
-            alert('OK');
-          },
-          data: sendInfo
-      });
-    }
-    else{
+    //   if(error_message){
+    //     var sendInfo = {
+    //       lname: lastName,
+    //       fname: firstName,
+    //       email: email,
+    //       password: password
+    //     };
+    //   };
+    //
+    //   $.ajax({
+    //       type: "POST",
+    //       url: "/registration.php",
+    //       dataType: "json",
+    //       success: function () {
+    //         alert('OK');
+    //       },
+    //       data: sendInfo
+    //   });
+    // }
+    // else{
+    //   return false;
+    // }
+    if(!error_message){
       return false;
     }
   });
 });
-  // $('input').focus(function(){
-  //   $('p').text("");
-  // });
 })();

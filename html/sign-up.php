@@ -15,21 +15,21 @@
     <p id="head"></p>
     <!-- <p id="p1"></p> -->
     <div class="form-group has-success has-feedback" name="username">
-      <input id="firstName" name="your_firstName" class="form-control" placeholder="Enter First name"><p class="red_line" id="p1"><?php echo isset($FNameError) ? $FNameError : ""; ?></p>
+      <input id="firstName" name="your_firstName" class="form-control" placeholder="Enter First name"><p class="red_line" id="p1"><?php echo isset($FNameError) ? $FNameError : ""; ?></p></a>
     </div>
     <div class="form-group has-success has-feedback">
-      <input id="lastName" name="your_lastName" class="form-control" placeholder="Enter Last name"><p class="red_line" id="p2"><?php echo isset($LNameError) ? $LNameError : ""; ?></p>
-    </div>
-
-    <div class="form-group has-success has-feedback">
-      <input id="email" type="text" name="your_email" class="form-control" placeholder="Enter email"><p class="red_line" id="p3"><?php echo isset($emailError) ? $emailError : ""; ?></p>
+        <a><input id="lastName" name="your_lastName" class="form-control" placeholder="Enter Last name"><p class="red_line" id="p2"><?php echo isset($LNameError) ? $LNameError : ""; ?></p></a>
     </div>
 
     <div class="form-group has-success has-feedback">
-      <input id="password" type="password" name="your_password" class="form-control" placeholder="Enter password"><p class="red_line" id="p4"><?php echo isset($passwordError) ? $passwordError : ""; ?></p>
+      <a><input id="email" type="text" name="your_email" class="form-control" placeholder="Enter email"><p class="red_line" id="p3"><?php echo isset($emailError) ? $emailError : ""; ?></p></a>
+    </div>
+
+    <div class="form-group has-success has-feedback">
+      <a><input id="password" type="password" name="your_password" class="form-control" placeholder="Enter password"><p class="red_line" id="p4"><?php echo isset($passwordError) ? $passwordError : ""; ?></p></a>
     </div>
     <div class="form-group has-success has-feedback">
-      <input  id="confirm_password"  name="confirm_your_password" type="password" class="form-control" placeholder="Return password"><p class="red_line" id="p5"> <?php echo isset($passwordConfError) ? $passwordConfError : ""; ?></p>
+      <a><input  id="confirm_password"  name="confirm_your_password" type="password" class="form-control" placeholder="Return password"><p class="red_line" id="p5"> <?php echo isset($passwordConfError) ? $passwordConfError : ""; ?></p></a>
     </div>
 
     <div class="form-control" action="reg_ok">
