@@ -134,9 +134,9 @@
 // //
 (function(){
   $("#register").click(function(e){
-    $("input").focus(function(e){
-      $("a").find("p").text("");
-    });
+    // $("input").focus(function(e){
+    //   $("a").find("p").text("");
+    // });
     // $("input").focus(function(e){
     //   $("p").text("");
     // });
@@ -151,27 +151,27 @@
       // Initializing Variables With Regular Expressions
       var email_regex = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
       var error_message = true;
-      if(!firstName.length){
-        $('#p1').text("*  You first name field in reguired *");
+      if(firstName.length == 0){
+        $('#fname_error').text("*  You first name field in reguired *");
         error_message = false;
       }
 
       if (lastName.length == 0) {
-        $('#p2').text("* You last name field in reguired *");
+        $('#lname_error').text("* You last name field in reguired *");
         error_message = false;
       }
       if(!email.match(email_regex)){
-        $('#p3').text("* For your email please use @ + . *");
+        $('#email_error').text("* For your email please use @ + . *");
         error_message = false;
       }
 
       if(password.length < 8){
-        $('#p4').text("* You password must be 8 or more  *");
+        $('#password_error').text("* You password must be 8 or more  *");
         error_message = false;
       }
 
       if(password2 != password){
-        $('#p5').text("* You password must be same *");
+        $('#conf_password_error').text("* You password must be same *");
         error_message = false;
       }
     //   if(error_message){

@@ -1,14 +1,7 @@
 <?php
 $error_status = true;
-// require_once("db_connection.php");
+require_once("db_connection.php");
 if ((isset($_POST['sign-up']))) {
-    try {
-        $pdoConnection = new PDO("mysql:host=localhost; dbname=reg", "root", "Trezvonnozvon=2015");
-    } catch (PDOException $exc) {
-        echo $exc->getMessage();
-        exit();
-    }
-
     $FNameError = $LNameError = $emailError = $passwordError = $passwordConfError = "";
 
     $yourFName = trim($_POST['your_firstName']);//trim() - delete space with begin str and end str

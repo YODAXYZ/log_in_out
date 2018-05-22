@@ -1,21 +1,17 @@
 (function(){
   $("#sign-in").click(function(e){
     $('.red_line').html("");
-    var email = $("#email").val();
-    var password = $("#password").val();
+    var email = $("#your_email").val();
+    var password = $("#your_password").val();
     var error_message = true;
     if (email.length == 0) {
-      $('#p1').text("* You email field must be reguired *");
-      error_message = false;
+      $('#email_error').text("* You email field must be reguired *");
+      return false;
     }
     if (password.length == 0) {
-      $('#p2').text("* You password field must be reguired *");
-      error_message = false;
+      $('#password_error').text("* You password field must be reguired *");
+      return false;
     }
-    else if(){
-      $('#p2').text("* You password or email introduced incorrect *")
-    }
-
     // if (error_message) {
     //   var sendInfo = {
     //     email: email,

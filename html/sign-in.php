@@ -9,21 +9,22 @@
 
     <title>sign in</title>
   </head>
-  <body class="text-center">
+  <body class="text-center in">
     <form class="form-sign" method="post" action="">
       <img class="logo" src="/pictures/logo.png">
       <h2 >Sign in to first</h1>
       <div class="form-group has-success has-feedback">
-        <input type="email" class="form-control" id="email" placeholder="Enter email"><p class="red_line" id="p1"></p>
+        <input type="email" class="form-control" id="your_email" placeholder="Enter email"><span class="red_line" id="email_error"></span>
       </div>
       <div class="form-group has-success has-feedback">
-        <input type="password" class="form-control" id="password" placeholder="Enter password"><p class="red_line" id="p2"></p>
+        <input type="password" class="form-control" id="your_password" placeholder="Enter password"><span class="red_line" id="password_error"></span>
       </div>
-      <div class="form-control">
+      <?php echo isset($error_data) ? $error_data : "";  ?>
+      <div class="form-control" action="sign-in.php">
         <button id="sign-in"class="bm" type="submit">Sign in</button>
       </div>
     </form>
-    <form action="index.php">
+    <form class="form-href" action="signsss">
     <div class="form-control has-success has-feedback">
       <button type="submit" class="">Sign up</button>
     </div>
